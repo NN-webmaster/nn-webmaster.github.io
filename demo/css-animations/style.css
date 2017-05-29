@@ -1,0 +1,130 @@
+/* Should be deleted
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #2B3134;
+  padding: 0 20%;
+  box-sizing: border-box;
+}
+
+/* Component Styles
+   ========================================================================== */
+
+.as-bar {
+  width: 20px;
+  height: 20px;
+  display: flex;
+}
+
+/* Vertical pulsation bar */
+.as-vertical-bar {
+  justify-content: space-between;
+}
+
+.as-vb-line {
+  width: 20%; height: 100%;
+  background: #FF6700;
+  transform-origin: 100% 100%;
+}
+
+.as-vb-line:nth-of-type(1) { animation: as-anim-vertical-jumping 2s linear infinite normal;   }
+.as-vb-line:nth-of-type(2) { animation: as-anim-vertical-jumping 1.2s linear infinite normal; }
+.as-vb-line:nth-of-type(3) { animation: as-anim-vertical-jumping 1.7s linear infinite normal; }
+
+@keyframes as-anim-vertical-jumping {
+  50%  { transform: scaleY(0) }
+}
+
+/* Horizontal pulsation from center bar */
+
+.as-pulse-bar {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.as-pb-line {
+  width: 20%; height: 20%;
+  background: #FF6700;
+  transform-origin: center center;
+}
+
+.as-pb-line:nth-of-type(1) { animation: as-anim-center-stretching .6s linear infinite alternate; }
+.as-pb-line:nth-of-type(2) { animation: as-anim-center-stretching 1s linear infinite alternate; }
+.as-pb-line:nth-of-type(3) { animation: as-anim-center-stretching .8s linear infinite alternate; }
+
+@keyframes as-anim-center-stretching {
+  100% { transform: scaleY(3) }
+}
+
+/* Horizontal opacity change bar */
+
+.as-opacity-bar {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.as-ob-line {
+  width: 20%; height: 100%;
+  background: #FF6700;
+}
+
+.as-ob-line:nth-of-type(1) { animation: as-anim-opacity-horizontal .5s linear infinite alternate; }
+.as-ob-line:nth-of-type(2) { animation: as-anim-opacity-horizontal .5s linear .2s infinite alternate; }
+.as-ob-line:nth-of-type(3) { animation: as-anim-opacity-horizontal .5s linear .4s infinite alternate; }
+
+@keyframes as-anim-opacity-horizontal {
+  100% { opacity: 0; }
+}
+
+/* Vertical jumping bar */
+
+.as-jumping-bar {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.as-jb-line {
+  width: 20%; height: 50%;
+  background: #FF6700;
+}
+
+.as-jb-line:nth-of-type(1) { animation: as-anim-jumping-vertical .5s linear .2s infinite alternate; }
+.as-jb-line:nth-of-type(2) { animation: as-anim-jumping-vertical .5s linear infinite alternate; }
+.as-jb-line:nth-of-type(3) { animation: as-anim-jumping-vertical .5s linear .4s infinite alternate; }
+
+@keyframes as-anim-jumping-vertical {
+  100% { transform: translateY(-200%); }
+}
+
+/* Jumping and opacity bar */
+
+.as-opacityjumping-bar {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.as-oj-line {
+  width: 20%; height: 20%;
+  background: #FF6700;
+}
+
+.as-oj-line:nth-of-type(1) { animation: as-anim-opacityjumping .5s linear infinite alternate; }
+.as-oj-line:nth-of-type(2) { animation: as-anim-opacityjumping .5s linear .2s infinite alternate; }
+.as-oj-line:nth-of-type(3) { animation: as-anim-opacityjumping .5s linear .4s infinite alternate; }
+
+@keyframes as-anim-opacityjumping {
+  100% { 
+    opacity: 0;
+/*     transform: scaleY(3); */
+  }
+}
